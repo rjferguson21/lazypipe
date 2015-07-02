@@ -23,7 +23,7 @@ function lazypipe() {
 		
 		var build = function() {
 				validateSteps(steps);
-				return combine.apply(null, steps.map(function(t) {
+				return combine.obj.apply(null, steps.map(function(t) {
 					return t.task.apply(null, t.args);
 				}));
 			};
